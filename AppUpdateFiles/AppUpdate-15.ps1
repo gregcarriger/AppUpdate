@@ -38,7 +38,7 @@ while ((Get-ScheduledTask -TaskName 'AppPrio').State  -ne 'Disabled') {
 	Write-Progress -Activity "Waiting on AppPrio" -status $status -percentComplete ($i / 60)
 }
 
-Set-Location C:\Users\Public\dynamic_scheduler\logs
+Set-Location C:\AppFolder\logs
 Get-ChildItem -Filter prio* | Where-Object LastWriteTime -ge $starttime | Get-Content -Tail 10
 Write-Host "Started AppAssy at"(get-date).ToString("HH:mm:ss") -NoNewline
 Write-Host " and expected finish at"(get-date).AddMinutes(1).ToString("HH:mm:ss")
@@ -54,7 +54,7 @@ while ((Get-ScheduledTask -TaskName 'AppAssy').State  -ne 'Disabled') {
 	Write-Progress -Activity "Waiting on AppAssy" -status $status -percentComplete ($i / 60)
 }
 
-Set-Location C:\Users\Public\dynamic_scheduler\logs
+Set-Location C:\AppFolder\logs
 Get-ChildItem -Filter Assembly* | Where-Object LastWriteTime -ge $starttime | Get-Content -Tail 10
 Write-Host "Started AppFab at"(get-date).ToString("HH:mm:ss") -NoNewline
 Write-Host " and expected finish at"(get-date).AddMinutes(1).ToString("HH:mm:ss")
@@ -70,7 +70,7 @@ while ((Get-ScheduledTask -TaskName 'AppFab').State  -ne 'Disabled') {
 	Write-Progress -Activity "Waiting on AppFab" -status $status -percentComplete ($i / 60)
 }
 
-Set-Location C:\Users\Public\dynamic_scheduler\logs
+Set-Location C:\AppFolder\logs
 Get-ChildItem -Filter Fab* | Where-Object LastWriteTime -ge $starttime | Get-Content -Tail 10
 Write-Host "Started AppConstraints at"(get-date).ToString("HH:mm:ss") -NoNewline
 Write-Host " and expected finish at"(get-date).AddMinutes(1).ToString("HH:mm:ss")
@@ -86,7 +86,7 @@ while ((Get-ScheduledTask -TaskName 'AppConstraints').State  -ne 'Disabled') {
 	Write-Progress -Activity "Waiting on AppConstraints" -status $status -percentComplete ($i / 60)
 }
 
-Set-Location C:\Users\Public\dynamic_scheduler\logs
+Set-Location C:\AppFolder\logs
 Get-ChildItem -Filter Constraints* | Where-Object LastWriteTime -ge $starttime | Get-Content -Tail 10
 
 ### CHECK RECUR
