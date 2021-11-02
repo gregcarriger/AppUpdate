@@ -8,7 +8,8 @@ Open up AppUpdate-Config.ps1 in a text editor and make sure "Personal Variables"
 
 ## Step 2 - Run the program
 
-Run AppUpdate-Start.ps1 with ```powershell
+Run AppUpdate-Start.ps1 with 
+```powershell
 .\AppUpdate-Start.ps1
 ```
 
