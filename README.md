@@ -2,7 +2,7 @@
 
 PowerShell program to update, deploy, and test software updates.
 
-- This program reduced software deployments from 3 hours to 1 hour.
+- This script reduced software deployments from 3 hours to 1 hour.
 
 ## Step 1 - Set variables
 
