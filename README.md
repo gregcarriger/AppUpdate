@@ -2,6 +2,8 @@
 
 PowerShell program to update, deploy, and test software updates.
 
+This program reduced software deployments from 3 hours to 1 hour.
+
 ## Step 1 - Set variables
 
 Open up AppUpdate-Config.ps1 in a text editor and make sure "Personal Variables" and "Variables" are set correctly.
