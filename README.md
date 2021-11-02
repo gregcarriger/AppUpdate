@@ -15,3 +15,7 @@ Run AppUpdate-Start.ps1 in a PowerShell prompt with `.\AppUpdate-Start.ps1`
 ## Step 3 - Update AWS hosted software ☁
 
 This script has 4 main sections. It has sections to update Production, QA, and Dev, and also a section to validate required logins and validate files and connectivity needed for the script to function properly.
+
+## Global Variables ⚠
+
+This script uses global variables so it can carry variables into PowerShell remoting sessions and so status is maintained during multiple script runs.
